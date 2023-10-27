@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --light: #f5eeea;
+    --beige: #ccb1ab;
+    --dark: #23243c;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: var(--light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* TOUTES PAGES --- HEADER - BARRE DE NAVIGATION */
+header {
+    display: flex;
+    width: 100%;
+    background-color: var(--beige);
+    color: var(--dark);
+    height: 170px;
+}
+
+header .navigation {
+    display: flex;
+    width: 100%;
+}
+
+header .navigation .logo-img-home {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+header .navigation .logo-img-home img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    margin-left: 100px;
+}
+
+header .navigation ul {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 170px;
+    transition: all 0.3s;
+    opacity: 1;
+}
+
+header .navigation ul.hidden {
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
+}
+
+header .navigation ul li {
+    list-style: none;
+    width: 150px;
+    padding: 20px;
+}
+
+header .navigation ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: x-large;
+    font-weight: 150;
+    transition: .3s;
+}
+
+header .navigation ul li a:hover {
+    color: var(--light);
+}
+
+header .navigation ul li a.active {
+    color: var(--light);
+}
+
+header .navigation .toggle {
+    position: absolute;
+    right: 50px;
+    top: 74px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1350px) {
+    header .navigation ul {
+        display: none;
+    }
+
+    header .navigation .toggle {
+        display: block;
+    }
+}
+
+
+/* INDEX --- MAIN */
+main {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .titre {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 50px;
+    color: var(--beige);
+}
+
+main .titre h2 {
+    font-weight: 200;
+}
+
+
+/* INDEX --- CAROUSSEL */
+section {
+    margin-bottom: 50px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* INDEX --- CARTE D'AVIS */
+.row {
+    margin-top: 50px;
+}
+
+.custom-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card-title {
+    font-weight: 800;
+}
+
+.card-text {
+    font-weight: 200;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+}
+
+
+/* INDEX --- CARTE PARTENAIRE */
+.txt-partenaire {
+    margin-top: 50px;
+    font-size: x-large;
+    font-weight: 200;
+}
+
+.logo-partenaire .row {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* ABOUT --- MAIN */
+.about {
+    margin: 100px;
+}
+
+.about .cont-about p{
+    text-align: justify;
+    font-weight: 100;
+}
+
+.about .location {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.about .contact-about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+
+/* TOUTES PAGES --- FOOTER */
+footer {
+    background-color: var(--beige);
+    text-align: center;
+    width: 100%;
+    height: 150px;
+}
+
+footer .footer-top {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: large;
+    font-weight: 150;
+    transition: .3s;
+}
+
+footer ul li a:hover {
+    color: var(--light);
+}
+
+footer .link {
+    text-decoration: none;
+}
+
+footer .footer-bottom {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--dark);
+    border-top: 1px solid var(--light);
+}
+
+footer .copyright {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+footer .email {
+    text-decoration: none;
+    color: var(--dark);
+}

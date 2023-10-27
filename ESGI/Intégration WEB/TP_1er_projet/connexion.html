@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOUTIQUE</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navigation">
+            <div class="logo-img-home">
+                <a href="index.html"><img src="img/logo.png" alt="Logo de la boutique"></a>
+            </div>
+            <ul>
+                <li><a href="index.html" class="link">Accueil</a></li>
+                <li><a href="connexion.html" class="link active">Connexion</a></li>
+                <li><a href="boutique.html" class="link">Boutique</a></li>
+                <li><a href="faq.html" class="link">FAQ</a></li>
+                <li><a href="about.html" class="link">À Propos</a></li>
+                <li><a href="contact.html" class="link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Connexion</h1>
+            <form action="traitement_connexion.php" method="POST">
+                <div class="form-group">
+                    <label for="login">Login, Nom ou Email :</label>
+                    <input type="text" class="form-control" id="login" name="login" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="motDePasse">Mot de passe :</label>
+                    <input type="password" class="form-control" id="motDePasse" name="motDePasse" required>
+                </div>
+    
+                <button type="submit" class="btn btn-primary">Se connecter</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="link">Accueil</a></li>
+                    <li><a href="connexion.html" class="link active">Connexion</a></li>
+                    <li><a href="boutique.html" class="link">Boutique</a></li>
+                    <li><a href="faq.html" class="link">FAQ</a></li>
+                    <li><a href="about.html" class="link">À Propos</a></li>
+                    <li><a href="contact.html" class="link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2023 - DI - <a class="email" href="mailto:damien.ikovic@icloud.com">damien.ikovic@icloud.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
